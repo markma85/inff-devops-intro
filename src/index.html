@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark IT Zone</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="./static/devops_5136950.png">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My DevOps Project</h1>
+    </header>
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>This is a homepage to introduce my work as a DevOps Engineer in the project Innovate-Future-Foundation.</p>
+        </section>
+        <section>
+            <h2>Features</h2>
+            <h3>Frontend Pipeline</h3>
+            <p>This pipeline configuration provisions an AWS S3 bucket and a CloudFront distribution to host and serve a frontend application efficiently. It incorporates secure and scalable design practices to ensure seamless user experiences while safeguarding resources.</p>
+            <ul>
+                <li>Code Repo URL: <a href="https://github.com/Innovate-Future-Foundation/Frontend/tree/devops/mark">https://github.com/Innovate-Future-Foundation/Frontend/tree/devops/mark</a></li>
+                <li>Website URL: <a href="https://inff-web.mark-it-zone.com">https://inff-web.mark-it-zone.com</a></li>
+                <li>CloudFront Distribution URL: <a href=""></a></li>
+                <li>Jenkins URL: <a href="https://jenkins.mark-it-zone.com">https://jenkins.mark-it-zone.com</a></li>
+            </ul>
+            <div class="icraft-iframe">
+                <iframe id="frontend-pipeline-iframe" title="iCraft Editor" allowfullscreen style="width: 100%; height: 100%;"></iframe>
+              </div>
+            <h3>Server Pipeline</h3>
+            <p>The Jenkins backend server pipeline is architected to utilize both Google Cloud Platform (GCP) and Amazon Web Services (AWS) for an efficient, hybrid-cloud CI/CD process. This architecture leverages the strengths of each platform, optimizing the build and deployment workflow for a .NET application with Dockerized components.</p>
+            <ul>
+                <li>Code Repo URL: <a href="https://github.com/Innovate-Future-Foundation/Server/tree/devops/mark">https://github.com/Innovate-Future-Foundation/Server/tree/devops/mark</a></li>
+                <li>Backend URL: <a href="https://inff-backend.mark-it-zone.com:5091">https://inff-backend.mark-it-zone.com:5091</a></li>
+                <li>Swagger URL: <a href="https://inff-backend.mark-it-zone.com:5091/swagger/index.html">https://inff-backend.mark-it-zone.com:5091/swagger/index.html</a></li>
+                <li>Portainer URL: <a href="https://inff-backend.mark-it-zone.com:9443">https://inff-backend.mark-it-zone.com:9443</a></li>
+                <li>PgAdmin URL: <a href="http://inff-backend.mark-it-zone.com:5050">http://inff-backend.mark-it-zone.com:5050</a></li>
+                <li>Jenkins URL: <a href="https://jenkins.mark-it-zone.com">https://jenkins.mark-it-zone.com</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Mark IT Zone | My DevOps Project</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script>
+        const EDITOR_BASE_URL = "https://icraft.gantcloud.com/editor";
+        const S3_BASE_URL = "https://inff.mark-it-zone.com.s3.ap-southeast-2.amazonaws.com";
+        const params = new URLSearchParams({
+            url: S3_BASE_URL +"/static/Inff-Frontend-DevOps-Architecture.icraft",
+            preview: "true",
+            defaultAnimationPlan: "20",
+            autoPlay: "false",
+            loop: "false"
+        });
+
+        const src = `${EDITOR_BASE_URL}?${params.toString()}`;
+        document.getElementById("frontend-pipeline-iframe").src = src;
+    </script>
+</body>
+</html>
